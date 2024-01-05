@@ -1,6 +1,7 @@
 package AutoSchedule.src;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.io.FileWriter;
 import java.io.IOException;
 import org.json.simple.*;
@@ -24,7 +25,7 @@ public class Schedule {
         this.employees = employees;
     }
 
-    public void addEmployee(String name, int desiredHours, String[] availability, boolean isFOH, boolean isBOH, int rating, float scheduledHours, ArrayList<Date> daysOff) {
+    public void addEmployee(String name, int desiredHours, HashMap<String, String> availability, boolean isFOH, boolean isBOH, int rating, float scheduledHours, ArrayList<Date> daysOff) {
         employees.add(new Employee(name, desiredHours, availability, isFOH, isBOH, rating, scheduledHours, daysOff));
     }
 

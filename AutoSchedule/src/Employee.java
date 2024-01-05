@@ -1,10 +1,12 @@
+package AutoSchedule.src;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 class Employee {
     private String name;
     private float desiredHours;
-    private String[] availability;
+    private HashMap<String, String> availability;
     private boolean isFOH;
     private boolean isBOH;
     private float rating;
@@ -26,7 +28,7 @@ class Employee {
         setScheduledHours(0.0f);
         setDaysOff(new ArrayList<Date>());
     }
-    public Employee(String name, int desiredHours, String[] availabiliy, boolean isFOH, boolean isBOH, int rating, float scheduledHours, ArrayList<Date> daysOff) {
+    public Employee(String name, int desiredHours, HashMap<String, String> availabiliy, boolean isFOH, boolean isBOH, int rating, float scheduledHours, ArrayList<Date> daysOff) {
         setName(name);
         setDesiredHours(desiredHours);
         setAvailability(availabiliy);
@@ -45,7 +47,7 @@ class Employee {
         return this.desiredHours;
     }
 
-    public String[] getAvailability() {
+    public HashMap<String, String> getAvailability() {
         return this.availability;
     }
 
@@ -78,7 +80,7 @@ class Employee {
             this.desiredHours = desiredHours;
     }
 
-    private void setAvailability(String[] availability) {
+    private void setAvailability(HashMap<String, String> availability) {
         this.availability = availability;
     }
 
@@ -103,6 +105,16 @@ class Employee {
     } 
 
     private void setOpenAvail() {
-        setAvailability(new String[]{"0-24", "0-24", "0-24", "0-24", "0-24", "0-24", "0-24"});
+        HashMap<String, String> availability = new HashMap<String, String>();
+
+        availability.put("Sunday", "0-24");
+        availability.put("Monday", "0-24");
+        availability.put("Tuesday", "0-24");
+        availability.put("Wednesday", "0-24");
+        availability.put("Thursday", "0-24");
+        availability.put("Friday", "0-24");
+        availability.put("Saturday", "0-24");
+
+        setAvailability(availability);
     }
 }
