@@ -107,13 +107,13 @@ class Employee {
     private void setOpenAvail() {
         HashMap<String, String> availability = new HashMap<String, String>();
 
-        availability.put("Sunday", "0-24");
-        availability.put("Monday", "0-24");
-        availability.put("Tuesday", "0-24");
-        availability.put("Wednesday", "0-24");
-        availability.put("Thursday", "0-24");
-        availability.put("Friday", "0-24");
-        availability.put("Saturday", "0-24");
+        availability.put("Sunday", "open");
+        availability.put("Monday", "open");
+        availability.put("Tuesday", "open");
+        availability.put("Wednesday", "open");
+        availability.put("Thursday", "open");
+        availability.put("Friday", "open");
+        availability.put("Saturday", "open");
 
         setAvailability(availability);
     }
