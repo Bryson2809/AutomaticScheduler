@@ -2,6 +2,9 @@ package AutoSchedule.src;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.io.FileWriter;
+import java.io.IOException;
+import org.json.simple.*;
 
 class Employee {
     private String name;
@@ -37,6 +40,7 @@ class Employee {
         setRating(rating);
         setScheduledHours(scheduledHours);
         setDaysOff(daysOff);
+        
     }
 
     public String getName() {
@@ -117,4 +121,6 @@ class Employee {
 
         setAvailability(availability);
     }
+
+    //TODO: Write employee information to JSON (could evetually be to database if project goes well)
 }

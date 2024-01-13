@@ -35,5 +35,5 @@ public class Schedule {
          */
     }
 
-
+    //TODO: Extract all employee info from JSON file to create employees in ArrayList (must be done after TODO in Employee.java is done) 
 }
